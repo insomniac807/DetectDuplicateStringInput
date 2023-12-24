@@ -22,6 +22,12 @@
 #include "../../std_lib_facilities.h" // still using modified/simplified version of std_lib
 
 // create a function to output duplicate words from a user input string and number of occurences
+
+/*
+	Testing Co-Pilot here. Output not correct or functionality not working as hoped.
+	Needs manual improvement. Duplicate only detected for 2 occurences. 3rd occurence treated as new word.
+	also, instead of number of occurences, program outputs the position of the duplicate word in the input string
+*/
 void detectDuplicateWords()
 {
 	// init variables
