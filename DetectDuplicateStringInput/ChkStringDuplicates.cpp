@@ -21,28 +21,37 @@
 
 #include "../../std_lib_facilities.h" // still using modified/simplified version of std_lib
 
+// create a function to output duplicate words from a user input string and number of occurences
+void detectDuplicateWords()
+{
+	// init variables
+	string previous = " "; // previous word; initialized to "not a word"
+	string current; // current word
+	int number_of_words = 0; // number of words seen so far
+
+	// prompt user
+	cout << "Start typing.....\n";
+
+	/*
+			Program will continue to run until
+					user enters the terminate key combo (i.e. ctrl+c)
+						*/
+	while (cin >> current)
+	{
+		++number_of_words; // increment number of words seen so far
+
+		// check if current word is same as previous word
+		if (previous == current)
+		{
+			cout << "Word number " << number_of_words
+				<< " repeated: " << current << "\n";
+		}
+		previous = current;
+	}
+}
+
 int main()
 {
-	/*
-		init variable current with whitespace as this will be treated as new line character 
-		meaning if statement will not break on first run
-	*/
-	string next; 
-	string current = " ";
-
-	cout << "Start typing.....\n"; // prompt user
-
-	/*
-		Program will continue to run until
-		user enters the terminate key combo (i.e. ctrl+c)
-	*/
-	while (cin >> next)
-	{
-		if (current == next)
-		{
-			cout << "Duplicate Detected: " << current << ":" << next << "\n";
-		}
-		current = next;
-	}
-	return 0;
+	detectDuplicateWords();
 }
+
