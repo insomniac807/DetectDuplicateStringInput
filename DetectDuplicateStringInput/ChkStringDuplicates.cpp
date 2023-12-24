@@ -1,21 +1,6 @@
 /*
 	Simple program to detect all duplicates from user input string(s)
 
-	N.B. 
-	1) Program IS case sensitive
-
-	2) Program will detect match 
-	EITHER
-	after carrige return from previous line
-	OR
-	from white space delimited string
-	e.g The inputs
-	"hello\n"
-	"hello\n"
-	will detect duplicate inputs (1 match). But so will the input
-	"well well well" (2 matches)
-	This is due to how cin handles input which will be explained in more detail in later chapters of the book
-
 	Bjarne Stroustrup - Programming_ Principles and Practice Using C++-Addison-Wesley Professional (2014)
 */
 
